@@ -6,4 +6,9 @@ before_install:
   - npm install -g @lhci/cli@0.4.x
 script:
   - lhci autorun
-  - lhci upload --target=lhci --serverBaseUrl=$LHCI_BASE_URL --basicAuth.username=$LHCI_USER --basicAuth.password=$LHCI_PASS
+  - lhci upload
+    --target=lhci
+    --token=$LCHI_BUILD_TOKEN
+    --serverBaseUrl=$LHCI_BASE_URL
+    --basicAuth.username=$LHCI_USER
+    --basicAuth.password=$LHCI_PASS
